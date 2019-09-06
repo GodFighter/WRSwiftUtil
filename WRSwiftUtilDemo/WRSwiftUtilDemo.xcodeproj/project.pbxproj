@@ -13,9 +13,15 @@
 		BB7B83F923210094009EDCFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7B83F823210094009EDCFB /* Assets.xcassets */; };
 		BB7B83FC23210094009EDCFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7B83FA23210094009EDCFB /* LaunchScreen.storyboard */; };
 		BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B8405232100F5009EDCFB /* WRDevice.swift */; };
+		BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31923220509004BCB92 /* WRImage.swift */; };
+		BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */; };
+		BBC0A324232206E0004BCB92 /* WRConfigStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A323232206E0004BCB92 /* WRConfigStyle.swift */; };
+		DEE1C45F1AC6EFC71804333D /* Pods_WRSwiftUtilDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftUtilDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65280CE124DA0253182F1362 /* Pods-WRSwiftUtilDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.release.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BB7B83EE23210093009EDCFB /* WRSwiftUtilDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WRSwiftUtilDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7B83F123210093009EDCFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB7B83F323210093009EDCFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		BB7B83FB23210094009EDCFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB7B83FD23210094009EDCFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7B8405232100F5009EDCFB /* WRDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDevice.swift; sourceTree = "<group>"; };
+		BBC0A31923220509004BCB92 /* WRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
+		BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationController.swift; sourceTree = "<group>"; };
+		BBC0A323232206E0004BCB92 /* WRConfigStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRConfigStyle.swift; sourceTree = "<group>"; };
+		E7936435BA1B164FF013B79F /* Pods-WRSwiftUtilDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.debug.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE1C45F1AC6EFC71804333D /* Pods_WRSwiftUtilDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12868CE6CF26D905CCE484D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB7B83E523210093009EDCFB = {
 			isa = PBXGroup;
 			children = (
 				BB7B83F023210093009EDCFB /* WRSwiftUtilDemo */,
 				BB7B83EF23210093009EDCFB /* Products */,
+				F5D8752D227FA88D6E93951E /* Pods */,
+				12868CE6CF26D905CCE484D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +91,9 @@
 		BB7B8403232100B0009EDCFB /* WRSwiftUtil */ = {
 			isa = PBXGroup;
 			children = (
+				BBC0A32023220699004BCB92 /* Config */,
+				BBC0A31B23220576004BCB92 /* Controller */,
+				BBC0A318232204D8004BCB92 /* Image */,
 				BB7B8404232100D4009EDCFB /* Device */,
 			);
 			name = WRSwiftUtil;
@@ -84,6 +108,48 @@
 			path = Device;
 			sourceTree = "<group>";
 		};
+		BBC0A318232204D8004BCB92 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				BBC0A31923220509004BCB92 /* WRImage.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		BBC0A31B23220576004BCB92 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BBC0A31C2322058B004BCB92 /* NavigationController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BBC0A31C2322058B004BCB92 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		BBC0A32023220699004BCB92 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				BBC0A323232206E0004BCB92 /* WRConfigStyle.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F5D8752D227FA88D6E93951E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7936435BA1B164FF013B79F /* Pods-WRSwiftUtilDemo.debug.xcconfig */,
+				65280CE124DA0253182F1362 /* Pods-WRSwiftUtilDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB7B840023210094009EDCFB /* Build configuration list for PBXNativeTarget "WRSwiftUtilDemo" */;
 			buildPhases = (
+				7696F620215EAB262EEFD6BB /* [CP] Check Pods Manifest.lock */,
 				BB7B83EA23210093009EDCFB /* Sources */,
 				BB7B83EB23210093009EDCFB /* Frameworks */,
 				BB7B83EC23210093009EDCFB /* Resources */,
+				6A99558AF9166146C623E9F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,12 +218,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A99558AF9166146C623E9F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7696F620215EAB262EEFD6BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WRSwiftUtilDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB7B83EA23210093009EDCFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */,
+				BBC0A324232206E0004BCB92 /* WRConfigStyle.swift in Sources */,
 				BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */,
+				BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */,
 				BB7B83F423210093009EDCFB /* ViewController.swift in Sources */,
 				BB7B83F223210093009EDCFB /* AppDelegate.swift in Sources */,
 			);
@@ -301,6 +414,7 @@
 		};
 		BB7B840123210094009EDCFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7936435BA1B164FF013B79F /* Pods-WRSwiftUtilDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +433,7 @@
 		};
 		BB7B840223210094009EDCFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65280CE124DA0253182F1362 /* Pods-WRSwiftUtilDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
