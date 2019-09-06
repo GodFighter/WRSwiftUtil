@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -146,7 +146,6 @@
 				E7936435BA1B164FF013B79F /* Pods-WRSwiftUtilDemo.debug.xcconfig */,
 				65280CE124DA0253182F1362 /* Pods-WRSwiftUtilDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
