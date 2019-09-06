@@ -15,7 +15,6 @@
 		BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B8405232100F5009EDCFB /* WRDevice.swift */; };
 		BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31923220509004BCB92 /* WRImage.swift */; };
 		BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */; };
-		BBC0A324232206E0004BCB92 /* WRConfigStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A323232206E0004BCB92 /* WRConfigStyle.swift */; };
 		DEE1C45F1AC6EFC71804333D /* Pods_WRSwiftUtilDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +31,6 @@
 		BB7B8405232100F5009EDCFB /* WRDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDevice.swift; sourceTree = "<group>"; };
 		BBC0A31923220509004BCB92 /* WRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
 		BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationController.swift; sourceTree = "<group>"; };
-		BBC0A323232206E0004BCB92 /* WRConfigStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRConfigStyle.swift; sourceTree = "<group>"; };
 		E7936435BA1B164FF013B79F /* Pods-WRSwiftUtilDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.debug.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +89,6 @@
 		BB7B8403232100B0009EDCFB /* WRSwiftUtil */ = {
 			isa = PBXGroup;
 			children = (
-				BBC0A32023220699004BCB92 /* Config */,
 				BBC0A31B23220576004BCB92 /* Controller */,
 				BBC0A318232204D8004BCB92 /* Image */,
 				BB7B8404232100D4009EDCFB /* Device */,
@@ -130,14 +127,6 @@
 				BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */,
 			);
 			path = NavigationController;
-			sourceTree = "<group>";
-		};
-		BBC0A32023220699004BCB92 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				BBC0A323232206E0004BCB92 /* WRConfigStyle.swift */,
-			);
-			path = Config;
 			sourceTree = "<group>";
 		};
 		F5D8752D227FA88D6E93951E /* Pods */ = {
@@ -265,7 +254,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */,
-				BBC0A324232206E0004BCB92 /* WRConfigStyle.swift in Sources */,
 				BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */,
 				BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */,
 				BB7B83F423210093009EDCFB /* ViewController.swift in Sources */,
