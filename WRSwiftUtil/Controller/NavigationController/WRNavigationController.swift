@@ -36,12 +36,24 @@ public struct WRConfigStyle {
         
         public static let barTintColor : UIColor? = nil                              //背景颜色
         
-        public static let barTintImage : UIImage? = {                                //背景图片
+        public static var barTintImage : UIImage? = {                                //背景图片
             let colors : [UIColor] = [UIColor(fromHexString: "#009CFF"), UIColor(fromHexString: "#1671EF")]
             return WRImage.color(size:CGSize(width: UIScreen.main.bounds.width, height: 64), colors: colors,
                                  start: CGPoint(x:0.5, y: 0.0), end: CGPoint(x:1.0, y: 1.0))
             
         }()
+        
+        public static func customBarTintImage(_ beginColor : UIColor, endColor : UIColor) -> () {
+            let colors : [UIColor] = [beginColor, endColor]
+            WRConfigStyle.NavigationBar.barTintImage = WRImage.color(size:CGSize(width: UIScreen.main.bounds.width, height: 64), colors: colors,
+                                                                     start: CGPoint(x:0.5, y: 0.0), end: CGPoint(x:1.0, y: 1.0))
+        }
+        public static func customBarTintImage(_ image : UIImage?) -> () {
+            if image != nil {
+                WRConfigStyle.NavigationBar.barTintImage = image
+            }
+        }
+
         public static let mnBarTintImage : UIImage? = {                                //背景图片
             let colors : [UIColor] = [UIColor(fromHexString: "#009CFF"), UIColor(fromHexString: "#1671EF")]
             return WRImage.color(size:CGSize(width: 44, height: UIScreen.main.bounds.height), colors: colors,
