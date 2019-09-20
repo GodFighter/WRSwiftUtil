@@ -17,8 +17,8 @@ public extension WRToastViewProtocol where Self : UIViewController{
         self.view.makeToast(message, duration: duration, position: ToastPosition.center)
     }
     
-    func showToastMessageOnWindow(_ message:String, duration: TimeInterval = 2.0){
-        let delegate = UIApplication.shared.delegate as! AppDelegate
-        delegate.window?.makeToast(message, duration: duration, position: ToastPosition.center)
-    }
+//    func showToastMessageOnWindow(_ message:String, duration: TimeInterval = 2.0){
+//        let delegate = UIApplication.shared.delegate as! AppDelegate
+//        delegate.window?.makeToast(message, duration: duration, position: ToastPosition.center)
+//    }
 }
