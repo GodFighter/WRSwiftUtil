@@ -14,7 +14,7 @@
 		BB7B83FC23210094009EDCFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7B83FA23210094009EDCFB /* LaunchScreen.storyboard */; };
 		BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B8405232100F5009EDCFB /* WRDevice.swift */; };
 		BBABFC88232F30F5000A1B3E /* WRPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBABFC87232F30F5000A1B3E /* WRPath.swift */; };
-		BBBD1F072334766900A2B415 /* WRNavigationBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F062334766900A2B415 /* WRNavigationBarProtocol.swift */; };
+		BBBD1F092334814000A2B415 /* WRNavigationBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F082334814000A2B415 /* WRNavigationBarProtocol.swift */; };
 		BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31923220509004BCB92 /* WRImage.swift */; };
 		BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */; };
 		DEE1C45F1AC6EFC71804333D /* Pods_WRSwiftUtilDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */; };
@@ -32,7 +32,7 @@
 		BB7B83FD23210094009EDCFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7B8405232100F5009EDCFB /* WRDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDevice.swift; sourceTree = "<group>"; };
 		BBABFC87232F30F5000A1B3E /* WRPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPath.swift; sourceTree = "<group>"; };
-		BBBD1F062334766900A2B415 /* WRNavigationBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationBarProtocol.swift; sourceTree = "<group>"; };
+		BBBD1F082334814000A2B415 /* WRNavigationBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationBarProtocol.swift; sourceTree = "<group>"; };
 		BBC0A31923220509004BCB92 /* WRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
 		BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationController.swift; sourceTree = "<group>"; };
 		E7936435BA1B164FF013B79F /* Pods-WRSwiftUtilDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.debug.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		BBBD1F032334757800A2B415 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BBBD1F062334766900A2B415 /* WRNavigationBarProtocol.swift */,
+				BBBD1F082334814000A2B415 /* WRNavigationBarProtocol.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 				BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */,
 				BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */,
 				BBABFC88232F30F5000A1B3E /* WRPath.swift in Sources */,
-				BBBD1F072334766900A2B415 /* WRNavigationBarProtocol.swift in Sources */,
+				BBBD1F092334814000A2B415 /* WRNavigationBarProtocol.swift in Sources */,
 				BB7B83F423210093009EDCFB /* ViewController.swift in Sources */,
 				BB7B83F223210093009EDCFB /* AppDelegate.swift in Sources */,
 			);
