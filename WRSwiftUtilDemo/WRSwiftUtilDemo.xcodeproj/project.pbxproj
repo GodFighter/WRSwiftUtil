@@ -17,6 +17,8 @@
 		BBBD1F092334814000A2B415 /* WRNavigationBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F082334814000A2B415 /* WRNavigationBarProtocol.swift */; };
 		BBBD1F16233488AC00A2B415 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F13233488AC00A2B415 /* Toast.swift */; };
 		BBBD1F17233488AC00A2B415 /* WRToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F15233488AC00A2B415 /* WRToastView.swift */; };
+		BBBD1F192334B0B000A2B415 /* WRProgressHUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */; };
+		BBBD1F1B2334B0FE00A2B415 /* WRIndicatorViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F1A2334B0FE00A2B415 /* WRIndicatorViewProtocol.swift */; };
 		BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31923220509004BCB92 /* WRImage.swift */; };
 		BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */; };
 		DEE1C45F1AC6EFC71804333D /* Pods_WRSwiftUtilDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */; };
@@ -37,6 +39,8 @@
 		BBBD1F082334814000A2B415 /* WRNavigationBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationBarProtocol.swift; sourceTree = "<group>"; };
 		BBBD1F13233488AC00A2B415 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		BBBD1F15233488AC00A2B415 /* WRToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRToastView.swift; sourceTree = "<group>"; };
+		BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRProgressHUDProtocol.swift; sourceTree = "<group>"; };
+		BBBD1F1A2334B0FE00A2B415 /* WRIndicatorViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRIndicatorViewProtocol.swift; sourceTree = "<group>"; };
 		BBC0A31923220509004BCB92 /* WRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
 		BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationController.swift; sourceTree = "<group>"; };
 		E7936435BA1B164FF013B79F /* Pods-WRSwiftUtilDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.debug.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				BBBD1F15233488AC00A2B415 /* WRToastView.swift */,
+				BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */,
+				BBBD1F1A2334B0FE00A2B415 /* WRIndicatorViewProtocol.swift */,
 			);
 			path = Indicator;
 			sourceTree = "<group>";
@@ -306,12 +312,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBBD1F17233488AC00A2B415 /* WRToastView.swift in Sources */,
+				BBBD1F1B2334B0FE00A2B415 /* WRIndicatorViewProtocol.swift in Sources */,
 				BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */,
 				BBBD1F16233488AC00A2B415 /* Toast.swift in Sources */,
 				BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */,
 				BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */,
 				BBABFC88232F30F5000A1B3E /* WRPath.swift in Sources */,
 				BBBD1F092334814000A2B415 /* WRNavigationBarProtocol.swift in Sources */,
+				BBBD1F192334B0B000A2B415 /* WRProgressHUDProtocol.swift in Sources */,
 				BB7B83F423210093009EDCFB /* ViewController.swift in Sources */,
 				BB7B83F223210093009EDCFB /* AppDelegate.swift in Sources */,
 			);
@@ -463,6 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D9M2CY5KM;
 				INFOPLIST_FILE = WRSwiftUtilDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D9M2CY5KM;
 				INFOPLIST_FILE = WRSwiftUtilDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'WRSwiftUtil'
-    s.version      = "1.0.8"
+    s.version      = "1.0.9"
     s.summary      = '常用 Swift 工具类定义'
     s.description  = '常用 Swift 工具类定义,便于初始化项目'
     s.homepage     = 'https://github.com/GodFighter/WRSwiftUtil'
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     s.frameworks   = 'UIKit','Foundation'
     s.social_media_url = 'http://weibo.com/huigedang/home?wvr=5&lf=reg'
     s.requires_arc = true
-    s.swift_version = '5.0'
+    s.swift_version = '3.0'
 
     s.subspec 'Device' do |ss|
         ss.source_files = 'WRSwiftUtil/Device/*.swift'
@@ -45,5 +45,7 @@ Pod::Spec.new do |s|
     end
 
     s.dependency 'Colours', '~> 5.13.0'
+    s.dependency 'MBProgressHUD', '~> 1.1.0'
+    s.dependency 'NVActivityIndicatorView', '~> 4.1.1'
 
 end
