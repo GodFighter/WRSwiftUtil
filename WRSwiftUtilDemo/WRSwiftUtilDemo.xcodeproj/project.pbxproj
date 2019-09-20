@@ -15,6 +15,8 @@
 		BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B8405232100F5009EDCFB /* WRDevice.swift */; };
 		BBABFC88232F30F5000A1B3E /* WRPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBABFC87232F30F5000A1B3E /* WRPath.swift */; };
 		BBBD1F092334814000A2B415 /* WRNavigationBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F082334814000A2B415 /* WRNavigationBarProtocol.swift */; };
+		BBBD1F0D2334858D00A2B415 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F0C2334858D00A2B415 /* Toast.swift */; };
+		BBBD1F10233485BE00A2B415 /* WRToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F0F233485BE00A2B415 /* WRToastView.swift */; };
 		BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31923220509004BCB92 /* WRImage.swift */; };
 		BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */; };
 		DEE1C45F1AC6EFC71804333D /* Pods_WRSwiftUtilDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */; };
@@ -33,6 +35,8 @@
 		BB7B8405232100F5009EDCFB /* WRDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDevice.swift; sourceTree = "<group>"; };
 		BBABFC87232F30F5000A1B3E /* WRPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPath.swift; sourceTree = "<group>"; };
 		BBBD1F082334814000A2B415 /* WRNavigationBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationBarProtocol.swift; sourceTree = "<group>"; };
+		BBBD1F0C2334858D00A2B415 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		BBBD1F0F233485BE00A2B415 /* WRToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRToastView.swift; sourceTree = "<group>"; };
 		BBC0A31923220509004BCB92 /* WRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
 		BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationController.swift; sourceTree = "<group>"; };
 		E7936435BA1B164FF013B79F /* Pods-WRSwiftUtilDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.debug.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 		BB7B8403232100B0009EDCFB /* WRSwiftUtil */ = {
 			isa = PBXGroup;
 			children = (
+				BBBD1F0E233485AB00A2B415 /* Indicator */,
+				BBBD1F0A233484FA00A2B415 /* Lib */,
 				BBBD1F052334761200A2B415 /* View */,
 				BBC0A31B23220576004BCB92 /* Controller */,
 				BBC0A318232204D8004BCB92 /* Image */,
@@ -124,6 +130,30 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BBBD1F0A233484FA00A2B415 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				BBBD1F0B2334852500A2B415 /* Toast */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		BBBD1F0B2334852500A2B415 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				BBBD1F0C2334858D00A2B415 /* Toast.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		BBBD1F0E233485AB00A2B415 /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				BBBD1F0F233485BE00A2B415 /* WRToastView.swift */,
+			);
+			path = Indicator;
 			sourceTree = "<group>";
 		};
 		BBC0A318232204D8004BCB92 /* Image */ = {
@@ -275,7 +305,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBD1F10233485BE00A2B415 /* WRToastView.swift in Sources */,
 				BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */,
+				BBBD1F0D2334858D00A2B415 /* Toast.swift in Sources */,
 				BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */,
 				BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */,
 				BBABFC88232F30F5000A1B3E /* WRPath.swift in Sources */,

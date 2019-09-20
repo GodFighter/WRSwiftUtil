@@ -33,6 +33,17 @@ Pod::Spec.new do |s|
         end
     end
 
+    s.subspec 'Lib' do |ss|
+        ss.subspec 'Toast' do |sss|
+            sss.source_files = 'WRSwiftUtil/Lib/Toast/*.swift'
+        end
+    end
+
+    s.subspec 'Indicator' do |ss|
+        ss.source_files = 'WRSwiftUtil/Indicator/*.swift'
+        ss.dependency 'WRSwiftUtil/Lib/Toast'
+    end
+
     s.dependency 'Colours', '~> 5.13.0'
 
 end
