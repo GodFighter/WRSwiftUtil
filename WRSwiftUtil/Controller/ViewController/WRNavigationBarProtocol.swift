@@ -21,21 +21,21 @@ public extension WRNavigationBarProtocol where Self : UIViewController {
     var naviBarBackgroundImageView : UIImageView? {
         return (self.navigationController?.navigationBar as? WRNavigationBar)?.backgroundImageView
     }
-
+    
     // Only navigationBar.isTranslucent equals true and effective
     func setNaviBarImage(_ image: UIImage?){
         self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
     }
-
+    
     // Only navigationBar.isTranslucent equals false and effective
     func setNaviBarColor(_ barColor: UIColor?){
         self.navigationController?.navigationBar.barTintColor = barColor
     }
-
+    
     func setNaviTintColor(_ tintColor: UIColor){
         self.navigationController?.navigationBar.tintColor = tintColor
     }
-
+    
     func setNaviTitleColor(_ titleColor: UIColor){
         
         var titleTextAttributes: [NSAttributedString.Key : AnyObject] =  [NSAttributedString.Key : AnyObject]()
@@ -49,11 +49,11 @@ public extension WRNavigationBarProtocol where Self : UIViewController {
         }
         self.navigationController?.navigationBar.titleTextAttributes = titleTextAttributes
     }
-
+    
     func setNaviShadowColor(_ shadowColor: UIColor){
         self.navigationController?.navigationBar.shadowImage = WRImage.color(CGSize(width: UIScreen.main.bounds.width, height: 1), shadowColor)
     }
-
+    
     func setNaviBarTitleColor(_ tintColor: UIColor, titleColor: UIColor, shadowColor: UIColor? = nil){
         self.setNaviBarColor(tintColor)
         self.setNaviTitleColor(titleColor)
@@ -61,7 +61,7 @@ public extension WRNavigationBarProtocol where Self : UIViewController {
             self.setNaviShadowColor(shadowColor)
         }
     }
-
+    
 }
 
 fileprivate typealias WRNavigationBarProtocol_BackTitle = WRNavigationBarProtocol
