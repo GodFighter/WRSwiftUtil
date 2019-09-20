@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     s.frameworks   = 'UIKit','Foundation'
     s.social_media_url = 'http://weibo.com/huigedang/home?wvr=5&lf=reg'
     s.requires_arc = true
-    s.swift_version = '3.0'
+    s.swift_version = '5.0'
 
     s.subspec 'Device' do |ss|
         ss.source_files = 'WRSwiftUtil/Device/*.swift'
