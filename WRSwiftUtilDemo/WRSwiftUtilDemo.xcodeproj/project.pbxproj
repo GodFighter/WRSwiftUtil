@@ -20,6 +20,7 @@
 		BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31923220509004BCB92 /* WRImage.swift */; };
 		BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */; };
 		BBDCB137233873E60057BF2E /* WRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCB136233873E60057BF2E /* WRBaseViewController.swift */; };
+		BBDCB1392338A30D0057BF2E /* WRNavigationBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCB1382338A30D0057BF2E /* WRNavigationBarProtocol.swift */; };
 		DEE1C45F1AC6EFC71804333D /* Pods_WRSwiftUtilDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		BBC0A31923220509004BCB92 /* WRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
 		BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationController.swift; sourceTree = "<group>"; };
 		BBDCB136233873E60057BF2E /* WRBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRBaseViewController.swift; sourceTree = "<group>"; };
+		BBDCB1382338A30D0057BF2E /* WRNavigationBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationBarProtocol.swift; sourceTree = "<group>"; };
 		E7936435BA1B164FF013B79F /* Pods-WRSwiftUtilDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.debug.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				BBDCB136233873E60057BF2E /* WRBaseViewController.swift */,
+				BBDCB1382338A30D0057BF2E /* WRNavigationBarProtocol.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				BBBD1F17233488AC00A2B415 /* WRToastView.swift in Sources */,
 				BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */,
 				BBBD1F16233488AC00A2B415 /* Toast.swift in Sources */,
+				BBDCB1392338A30D0057BF2E /* WRNavigationBarProtocol.swift in Sources */,
 				BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */,
 				BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */,
 				BBABFC88232F30F5000A1B3E /* WRPath.swift in Sources */,
