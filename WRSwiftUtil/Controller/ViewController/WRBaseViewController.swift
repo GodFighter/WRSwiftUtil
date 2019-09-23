@@ -14,11 +14,11 @@ open class WRBaseViewController: UIViewController, WRNavigationBarProtocol, WRTo
         debugPrint("deinit:\(self.classForCoder)")
     }
 
-    open override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
