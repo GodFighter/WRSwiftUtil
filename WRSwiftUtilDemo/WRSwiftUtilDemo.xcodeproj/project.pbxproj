@@ -125,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				BBDCB136233873E60057BF2E /* WRBaseViewController.swift */,
-				BBDCB1382338A30D0057BF2E /* WRNavigationBarProtocol.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -173,6 +172,7 @@
 		BBC0A31B23220576004BCB92 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BBDCB13A2338A3800057BF2E /* Protocol */,
 				BBBD1F032334757800A2B415 /* ViewController */,
 				BBC0A31C2322058B004BCB92 /* NavigationController */,
 			);
@@ -185,6 +185,14 @@
 				BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		BBDCB13A2338A3800057BF2E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BBDCB1382338A30D0057BF2E /* WRNavigationBarProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		F5D8752D227FA88D6E93951E /* Pods */ = {

@@ -32,11 +32,14 @@ Pod::Spec.new do |s|
         ss.subspec 'ViewController' do |sss|
             sss.source_files = 'WRSwiftUtil/Controller/ViewController/*.swift'
             sss.dependency 'WRSwiftUtil/Image'
-            sss.dependency 'WRSwiftUtil/Controller/NavigationController'
         end
         ss.subspec 'NavigationController' do |sss|
             sss.source_files = 'WRSwiftUtil/Controller/NavigationController/*.swift'
             sss.dependency 'WRSwiftUtil/Image'
+        end
+        ss.subspec 'Protocol' do |sss|
+            sss.source_files = 'WRSwiftUtil/Controller/Protocol/*.swift'
+            sss.dependency 'WRSwiftUtil/Controller/NavigationController'
         end
     end
 
