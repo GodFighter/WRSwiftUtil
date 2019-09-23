@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class WRBaseViewController: UIViewController, WRNavigationBarProtocol, WRToastViewProtocol {
+public class WRBaseViewController: UIViewController, WRNavigationBarProtocol, WRToastViewProtocol, WRProgressHUDProtocol {
 
     deinit{
         debugPrint("deinit:\(self.classForCoder)")
