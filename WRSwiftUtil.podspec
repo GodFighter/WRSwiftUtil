@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'WRSwiftUtil'
-    s.version      = "1.0.11"
+    s.version      = "1.0.12"
     s.summary      = '常用 Swift 工具类定义'
     s.description  = '常用 Swift 工具类定义,便于初始化项目'
     s.homepage     = 'https://github.com/GodFighter/WRSwiftUtil'
@@ -36,10 +36,6 @@ Pod::Spec.new do |s|
             sss.source_files = 'WRSwiftUtil/Controller/ViewController/*.swift'
             sss.dependency 'WRSwiftUtil/Image'
             sss.dependency 'WRSwiftUtil/Controller/NavigationController'
-#            sss.dependency 'WRSwiftUtil/Controller/ViewController/WRNavigationBarProtocol'
-#            sss.dependency 'WRSwiftUtil/Indicator/WRToastView'
- #           sss.dependency 'WRSwiftUtil/Indicator/WRProgressHUDProtocol'
-#            sss.dependency 'Colours', '~> 5.13.0'
         end
     end
 
