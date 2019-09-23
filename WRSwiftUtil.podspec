@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'WRSwiftUtil'
-    s.version      = "1.0.13"
+    s.version      = "1.0.14"
     s.summary      = '常用 Swift 工具类定义'
     s.description  = '常用 Swift 工具类定义,便于初始化项目'
     s.homepage     = 'https://github.com/GodFighter/WRSwiftUtil'
@@ -32,6 +32,8 @@ Pod::Spec.new do |s|
         ss.subspec 'ViewController' do |sss|
             sss.source_files = 'WRSwiftUtil/Controller/ViewController/*.swift'
             sss.dependency 'WRSwiftUtil/Image'
+            sss.dependency 'WRSwiftUtil/Controller/Protocol'
+            sss.dependency 'WRSwiftUtil/Indicator'
         end
         ss.subspec 'NavigationController' do |sss|
             sss.source_files = 'WRSwiftUtil/Controller/NavigationController/*.swift'
