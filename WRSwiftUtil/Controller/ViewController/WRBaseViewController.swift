@@ -8,13 +8,13 @@
 
 import UIKit
 
-public class WRBaseViewController: UIViewController, WRNavigationBarProtocol, WRToastViewProtocol, WRProgressHUDProtocol {
+open class WRBaseViewController: UIViewController, WRNavigationBarProtocol, WRToastViewProtocol, WRProgressHUDProtocol {
 
     deinit{
         debugPrint("deinit:\(self.classForCoder)")
     }
 
-    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    open override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
@@ -22,25 +22,26 @@ public class WRBaseViewController: UIViewController, WRNavigationBarProtocol, WR
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         //默认去除返回按钮标题
         self.setNaviBackTitle("")
+        debugPrint("viewDidLoad:\(self.classForCoder)")
     }
         
-    public override var prefersStatusBarHidden : Bool {
+    open override var prefersStatusBarHidden : Bool {
         return WRConfigStyle.StatusBar.isHidden
     }
         
-    public override var preferredStatusBarStyle : UIStatusBarStyle {
+    open override var preferredStatusBarStyle : UIStatusBarStyle {
         return WRConfigStyle.StatusBar.barStyle
     }
         
-    public override var preferredStatusBarUpdateAnimation : UIStatusBarAnimation {
+    open override var preferredStatusBarUpdateAnimation : UIStatusBarAnimation {
         return WRConfigStyle.StatusBar.updateAnimation
     }
         
-    public  func topViewController() -> UIViewController?{
+    open  func topViewController() -> UIViewController?{
         
         if let rootViewController = UIApplication.shared.keyWindow?.rootViewController{
             return self.topViewControllerWithRootViewController(rootViewController: rootViewController)
@@ -48,7 +49,7 @@ public class WRBaseViewController: UIViewController, WRNavigationBarProtocol, WR
         return nil
     }
         
-    public  func topViewControllerWithRootViewController(rootViewController : UIViewController) -> UIViewController{
+    open  func topViewControllerWithRootViewController(rootViewController : UIViewController) -> UIViewController{
         
         if let tabBarController = rootViewController as? UITabBarController, let selectedViewController = tabBarController.selectedViewController{
             return self.topViewControllerWithRootViewController(rootViewController: selectedViewController)
