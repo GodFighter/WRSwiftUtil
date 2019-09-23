@@ -20,7 +20,6 @@
 		BBBD1F192334B0B000A2B415 /* WRProgressHUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */; };
 		BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31923220509004BCB92 /* WRImage.swift */; };
 		BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */; };
-		BBDCB13523385ABE0057BF2E /* WRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCB13423385ABE0057BF2E /* WRBaseViewController.swift */; };
 		DEE1C45F1AC6EFC71804333D /* Pods_WRSwiftUtilDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +41,6 @@
 		BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRProgressHUDProtocol.swift; sourceTree = "<group>"; };
 		BBC0A31923220509004BCB92 /* WRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
 		BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationController.swift; sourceTree = "<group>"; };
-		BBDCB13423385ABE0057BF2E /* WRBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRBaseViewController.swift; sourceTree = "<group>"; };
 		E7936435BA1B164FF013B79F /* Pods-WRSwiftUtilDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.debug.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				BBBD1F082334814000A2B415 /* WRNavigationBarProtocol.swift */,
-				BBDCB13423385ABE0057BF2E /* WRBaseViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -320,7 +317,6 @@
 				BBBD1F092334814000A2B415 /* WRNavigationBarProtocol.swift in Sources */,
 				BBBD1F192334B0B000A2B415 /* WRProgressHUDProtocol.swift in Sources */,
 				BB7B83F423210093009EDCFB /* ViewController.swift in Sources */,
-				BBDCB13523385ABE0057BF2E /* WRBaseViewController.swift in Sources */,
 				BB7B83F223210093009EDCFB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
