@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'Color' do |ss|
-        s.source_files = 'WRSwiftUtil/Color/*.swift'
+        ss.source_files = 'WRSwiftUtil/Color/*.swift'
     end
 
 
