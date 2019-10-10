@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(WRPath.database)
+        print("\("13948202341".isPhone)")
     }
 
 

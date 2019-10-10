@@ -14,6 +14,7 @@
 		BB7B83FC23210094009EDCFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7B83FA23210094009EDCFB /* LaunchScreen.storyboard */; };
 		BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B8405232100F5009EDCFB /* WRDevice.swift */; };
 		BBABFC88232F30F5000A1B3E /* WRPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBABFC87232F30F5000A1B3E /* WRPath.swift */; };
+		BBB3415C234EE629005BF8B1 /* String+Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB3415B234EE629005BF8B1 /* String+Regular.swift */; };
 		BBBD1F16233488AC00A2B415 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F13233488AC00A2B415 /* Toast.swift */; };
 		BBBD1F17233488AC00A2B415 /* WRToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F15233488AC00A2B415 /* WRToastView.swift */; };
 		BBBD1F192334B0B000A2B415 /* WRProgressHUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */; };
@@ -37,6 +38,7 @@
 		BB7B83FD23210094009EDCFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7B8405232100F5009EDCFB /* WRDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDevice.swift; sourceTree = "<group>"; };
 		BBABFC87232F30F5000A1B3E /* WRPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPath.swift; sourceTree = "<group>"; };
+		BBB3415B234EE629005BF8B1 /* String+Regular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regular.swift"; sourceTree = "<group>"; };
 		BBBD1F13233488AC00A2B415 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		BBBD1F15233488AC00A2B415 /* WRToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRToastView.swift; sourceTree = "<group>"; };
 		BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRProgressHUDProtocol.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		BB7B8403232100B0009EDCFB /* WRSwiftUtil */ = {
 			isa = PBXGroup;
 			children = (
+				BBB34158234EE2B9005BF8B1 /* Common */,
 				BBECE14A233C5A4500198BF7 /* Color */,
 				BBBD1F14233488AC00A2B415 /* Indicator */,
 				BBBD1F11233488AC00A2B415 /* Lib */,
@@ -122,6 +125,14 @@
 				BBABFC87232F30F5000A1B3E /* WRPath.swift */,
 			);
 			path = Device;
+			sourceTree = "<group>";
+		};
+		BBB34158234EE2B9005BF8B1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BBB3415B234EE629005BF8B1 /* String+Regular.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		BBBD1F032334757800A2B415 /* ViewController */ = {
@@ -334,6 +345,7 @@
 				BBBD1F17233488AC00A2B415 /* WRToastView.swift in Sources */,
 				BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */,
 				BBBD1F16233488AC00A2B415 /* Toast.swift in Sources */,
+				BBB3415C234EE629005BF8B1 /* String+Regular.swift in Sources */,
 				BBDCB1392338A30D0057BF2E /* WRNavigationBarProtocol.swift in Sources */,
 				BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */,
 				BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */,
