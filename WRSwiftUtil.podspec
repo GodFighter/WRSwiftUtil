@@ -14,6 +14,10 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '9.0'
     s.swift_version = '5.0'
 
+    s.subspec 'Common' do |ss|
+        ss.source_files = 'WRSwiftUtil/Common/*.swift'
+    end
+
     s.subspec 'Device' do |ss|
         ss.source_files = 'WRSwiftUtil/Device/*.swift'
     end
