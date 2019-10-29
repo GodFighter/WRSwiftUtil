@@ -19,7 +19,8 @@ open class WRBaseViewController: UIViewController, WRNavigationBarProtocol, WRTo
     }
     
     required public init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+//        fatalError("init(coder:) has not been implemented")
     }
     
     open override func viewDidLoad() {
@@ -65,6 +66,15 @@ open class WRBaseViewController: UIViewController, WRNavigationBarProtocol, WRTo
             return rootViewController
         }
     }
+    
+    open override var shouldAutorotate : Bool {
+        return true
+    }
+    
+    open override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return UIDevice.current.userInterfaceIdiom == .pad ? .all : .portrait
+    }
+
 }
 
 
