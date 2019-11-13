@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'WRSwiftUtil'
-    s.version      = "1.0.21"
+    s.version      = "1.0.22"
     s.summary      = '常用 Swift 工具类定义'
     s.description  = '常用 Swift 工具类定义,便于初始化项目'
     s.homepage     = 'https://github.com/GodFighter/WRSwiftUtil'
@@ -59,6 +59,9 @@ Pod::Spec.new do |s|
         ss.source_files = 'WRSwiftUtil/Color/*.swift'
     end
 
+    s.subspec 'Notification' do |ss|
+        ss.source_files = 'WRSwiftUtil/Notification/*.swift'
+    end
 
     s.dependency 'Colours', '~> 5.13.0'
     s.dependency 'MBProgressHUD', '~> 1.1.0'

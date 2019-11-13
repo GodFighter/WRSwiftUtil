@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB7A8149237B9A9F009A4C50 /* WRNotifyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A8148237B9A9F009A4C50 /* WRNotifyProtocol.swift */; };
 		BB7B83F223210093009EDCFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B83F123210093009EDCFB /* AppDelegate.swift */; };
 		BB7B83F423210093009EDCFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B83F323210093009EDCFB /* ViewController.swift */; };
 		BB7B83F723210093009EDCFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7B83F523210093009EDCFB /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftUtilDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65280CE124DA0253182F1362 /* Pods-WRSwiftUtilDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.release.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BB7A8148237B9A9F009A4C50 /* WRNotifyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNotifyProtocol.swift; sourceTree = "<group>"; };
 		BB7B83EE23210093009EDCFB /* WRSwiftUtilDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WRSwiftUtilDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7B83F123210093009EDCFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB7B83F323210093009EDCFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BB7A8147237B9A68009A4C50 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				BB7A8148237B9A9F009A4C50 /* WRNotifyProtocol.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		BB7B83E523210093009EDCFB = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		BB7B8403232100B0009EDCFB /* WRSwiftUtil */ = {
 			isa = PBXGroup;
 			children = (
+				BB7A8147237B9A68009A4C50 /* Notification */,
 				BBB34158234EE2B9005BF8B1 /* Common */,
 				BBECE14A233C5A4500198BF7 /* Color */,
 				BBBD1F14233488AC00A2B415 /* Indicator */,
@@ -346,6 +357,7 @@
 				BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */,
 				BBBD1F16233488AC00A2B415 /* Toast.swift in Sources */,
 				BBB3415C234EE629005BF8B1 /* String+Regular.swift in Sources */,
+				BB7A8149237B9A9F009A4C50 /* WRNotifyProtocol.swift in Sources */,
 				BBDCB1392338A30D0057BF2E /* WRNavigationBarProtocol.swift in Sources */,
 				BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */,
 				BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */,
