@@ -30,11 +30,11 @@ public struct WRConfigStyle {
         
         private init() {}
         
-        public static let tintColor : UIColor = .white                               //按钮颜色
+        public static var tintColor : UIColor = .white                               //按钮颜色
         
-        public static let shadowColor : UIColor = .clear                             //阴影颜色
+        public static var shadowColor : UIColor = .clear                             //阴影颜色
         
-        public static let barTintColor : UIColor? = nil                              //背景颜色
+        public static var barTintColor : UIColor? = nil                              //背景颜色
         
         public static var barTintImage : UIImage? = {                                //背景图片
             let colors : [UIColor] = [UIColor(fromHexString: "#009CFF"), UIColor(fromHexString: "#1671EF")]
@@ -54,23 +54,23 @@ public struct WRConfigStyle {
             }
         }
 
-        public static let mnBarTintImage : UIImage? = {                                //背景图片
+        public static var mnBarTintImage : UIImage? = {                                //背景图片
             let colors : [UIColor] = [UIColor(fromHexString: "#009CFF"), UIColor(fromHexString: "#1671EF")]
             return WRImage.color(size:CGSize(width: 44, height: UIScreen.main.bounds.height), colors: colors,
                                  start: CGPoint(x:0.5, y: 0.0), end: CGPoint(x:1.0, y: 1.0))
             
         }()
         
-        public static let titleAttributes : [NSAttributedString.Key : Any] = {        //标题属性
+        public static var titleAttributes : [NSAttributedString.Key : Any] = {        //标题属性
             return [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular),
                     NSAttributedString.Key.foregroundColor : WRConfigStyle.NavigationBar.tintColor]
         }()
         
-        public static let backImage : UIImage? = UIImage(named: "navigationBar_Back")    //返回图标
+        public static var backImage : UIImage? = UIImage(named: "navigationBar_Back")    //返回图标
         
-        public static let backColor : UIColor = .white                               //返回颜色
+        public static var backColor : UIColor = .white                               //返回颜色
         
-        public static let backTitleAttributes : [NSAttributedString.Key : Any] = {    //返回字体
+        public static var backTitleAttributes : [NSAttributedString.Key : Any] = {    //返回字体
             return [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)]
         }()
     }

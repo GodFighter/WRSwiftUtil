@@ -20,15 +20,15 @@ public protocol WRNotifyProtocol {
 
 extension WRNotifyProtocol{
    
-    internal var name : Notification.Name {
+    public var name : Notification.Name {
         return Notification.Name("\(self.key)_Notify_\(self.rawValue)")
     }
     
-    internal var failed : Notification.Name {
+    public var failed : Notification.Name {
         return Notification.Name("\(self.key)_Notify_\(self.rawValue)_Failed")
     }
     
-    internal var success : Notification.Name {
+    public var success : Notification.Name {
         return Notification.Name("\(self.key)_Notify_\(self.rawValue)_Success")
     }
 }

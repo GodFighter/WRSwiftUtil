@@ -16,8 +16,6 @@
 		BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B8405232100F5009EDCFB /* WRDevice.swift */; };
 		BBABFC88232F30F5000A1B3E /* WRPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBABFC87232F30F5000A1B3E /* WRPath.swift */; };
 		BBB3415C234EE629005BF8B1 /* String+Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB3415B234EE629005BF8B1 /* String+Regular.swift */; };
-		BBBD1F16233488AC00A2B415 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F13233488AC00A2B415 /* Toast.swift */; };
-		BBBD1F17233488AC00A2B415 /* WRToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F15233488AC00A2B415 /* WRToastView.swift */; };
 		BBBD1F192334B0B000A2B415 /* WRProgressHUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */; };
 		BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31923220509004BCB92 /* WRImage.swift */; };
 		BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */; };
@@ -41,8 +39,6 @@
 		BB7B8405232100F5009EDCFB /* WRDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDevice.swift; sourceTree = "<group>"; };
 		BBABFC87232F30F5000A1B3E /* WRPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPath.swift; sourceTree = "<group>"; };
 		BBB3415B234EE629005BF8B1 /* String+Regular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regular.swift"; sourceTree = "<group>"; };
-		BBBD1F13233488AC00A2B415 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
-		BBBD1F15233488AC00A2B415 /* WRToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRToastView.swift; sourceTree = "<group>"; };
 		BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRProgressHUDProtocol.swift; sourceTree = "<group>"; };
 		BBC0A31923220509004BCB92 /* WRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
 		BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationController.swift; sourceTree = "<group>"; };
@@ -164,23 +160,13 @@
 		BBBD1F11233488AC00A2B415 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				BBBD1F12233488AC00A2B415 /* Toast */,
 			);
 			path = Lib;
-			sourceTree = "<group>";
-		};
-		BBBD1F12233488AC00A2B415 /* Toast */ = {
-			isa = PBXGroup;
-			children = (
-				BBBD1F13233488AC00A2B415 /* Toast.swift */,
-			);
-			path = Toast;
 			sourceTree = "<group>";
 		};
 		BBBD1F14233488AC00A2B415 /* Indicator */ = {
 			isa = PBXGroup;
 			children = (
-				BBBD1F15233488AC00A2B415 /* WRToastView.swift */,
 				BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */,
 			);
 			path = Indicator;
@@ -353,9 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBECE14C233C5A5D00198BF7 /* WRColor.swift in Sources */,
-				BBBD1F17233488AC00A2B415 /* WRToastView.swift in Sources */,
 				BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */,
-				BBBD1F16233488AC00A2B415 /* Toast.swift in Sources */,
 				BBB3415C234EE629005BF8B1 /* String+Regular.swift in Sources */,
 				BB7A8149237B9A9F009A4C50 /* WRNotifyProtocol.swift in Sources */,
 				BBDCB1392338A30D0057BF2E /* WRNavigationBarProtocol.swift in Sources */,
