@@ -199,7 +199,7 @@ public struct WRImage{
             return nil
         }
         
-        J0Context.draw(context, image: cgImage, rect: cuttingRect)
+        WRContext.draw(context, image: cgImage, rect: cuttingRect)
         
         let cuttingImage = UIGraphicsGetImageFromCurrentImageContext();
         
@@ -240,8 +240,8 @@ public struct WRImage{
             return nil
         }
         
-        J0Context.draw(context, image: bgImage, rect: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        J0Context.draw(context, image: image, rect: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        WRContext.draw(context, image: bgImage, rect: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        WRContext.draw(context, image: image, rect: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         
         let resultingImage = UIGraphicsGetImageFromCurrentImageContext()!
         
@@ -303,7 +303,7 @@ public struct WRImage{
 
 
 
-fileprivate struct J0Context{
+fileprivate struct WRContext{
     
     fileprivate static func clear(_ context : CGContext, rect : CGRect){
         
@@ -335,3 +335,46 @@ fileprivate struct J0Context{
     }
 
 }
+
+//MARK:-
+extension UIImage: WRImageProtocol{
+    public var wr: WRImageExtension {
+        return WRImageExtension(self)
+    }
+}
+
+public protocol WRImageProtocol{
+    var wr: WRImageExtension { get }
+}
+
+public struct WRImageExtension{
+    fileprivate let value: UIImage
+    
+    fileprivate init(_ value: UIImage){
+        self.value = value
+    }
+    
+    public func imageTintColor(_ tintColor: UIColor) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.value.size, false, self.value.scale)
+        
+        let context = UIGraphicsGetCurrentContext()
+        context?.translateBy(x: 0, y: self.value.size.height)
+        context?.scaleBy(x: 1.0, y: -1.0)
+        context?.setBlendMode(CGBlendMode.normal)
+        
+        let rect = CGRect(x: 0, y: 0, width: self.value.size.width, height: self.value.size.height) as CGRect
+        if let cgImage = self.value.cgImage {
+            context?.clip(to: rect, mask:  cgImage)
+        }
+        
+        tintColor.setFill()
+        context?.fill(rect)
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+
+}
+
