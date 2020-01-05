@@ -66,24 +66,24 @@ public struct WRStringExtension{
             return false
         }
     }
-    var isIP : Bool {
+    public var isIP : Bool {
         return WRStringExtension.validate(self.value, pattern: "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")
     }
-    var isUrl : Bool {
+    public var isUrl : Bool {
         return WRStringExtension.validate(self.value, pattern:  "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$")
     }
-    var isEmail : Bool {
+    public var isEmail : Bool {
         return WRStringExtension.validate(self.value, pattern: "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$")
     }
-    var isPhone : Bool {
+    public var isPhone : Bool {
         return WRStringExtension.validate(self.value, pattern: "^(1)\\d{10}$")
     }
-    var isCar: Bool {
+    public var isCar: Bool {
         return WRStringExtension.validate(self.value, pattern: "^[A-Za-z]{1}[A-Za-z_0-9]{5}$")
     }
 
     //MARK:-  Conversion
-    var htmlString : String? {
+    public var htmlString : String? {
         guard let data = self.value.data(using: String.Encoding.utf16, allowLossyConversion: false) else { return nil }
         guard let html = try? NSMutableAttributedString(
             data: data,
@@ -93,7 +93,7 @@ public struct WRStringExtension{
         return html.string
     }
     
-    var stripXml: String {
+    public var stripXml: String {
         // we need to make sure "&" is escaped first. Not doing this may break escaping the other characters
         var escaped = self.value.replacingOccurrences(of: "&", with: "&amp;", options: .literal)
         
@@ -106,20 +106,20 @@ public struct WRStringExtension{
         return escaped
     }
 
-    var stripHtml: String {
+    public var stripHtml: String {
         return self.value.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression)
     }
 
-    var stripLineBreaks: String {
+    public var stripLineBreaks: String {
         return self.value.replacingOccurrences(of: "\n", with: "", options: .regularExpression)
     }
 
     //MARK:-  Size
-    func width(_ font : UIFont) -> CGFloat {
+    public func width(_ font : UIFont) -> CGFloat {
         return self.value.boundingRect(with: CGSize(), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedString.Key.font : font], context: nil).width
     }
 
-    func height(width : CGFloat, font : UIFont) -> CGFloat {
+    public func height(width : CGFloat, font : UIFont) -> CGFloat {
         return self.value.boundingRect(with: CGSize(width: width, height: 0), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedString.Key.font : font], context: nil).height
     }
     
