@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'WRSwiftUtil'
-    s.version      = "1.1.4"
+    s.version      = "1.1.5"
     s.summary      = '常用 Swift 工具类定义'
     s.description  = '常用 Swift 工具类定义,便于初始化项目'
     s.homepage     = 'https://github.com/GodFighter/WRSwiftUtil'
@@ -48,11 +48,9 @@ Pod::Spec.new do |s|
         end
     end
 
-    #s.subspec 'Lib' do |ss|
-    #    ss.subspec 'Toast' do |sss|
-    #        sss.source_files = 'WRSwiftUtil/Lib/Toast/*.swift'
-    #     end
-    #end
+    s.subspec 'View' do |ss|
+        ss.source_files = 'WRSwiftUtil/View/*.swift'
+    end
     
     s.subspec 'Color' do |ss|
         ss.source_files = 'WRSwiftUtil/Color/*.swift'
