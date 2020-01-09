@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB14C17223C70D9F00D68D10 /* WRControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB14C17123C70D9F00D68D10 /* WRControl.swift */; };
 		BB7A8149237B9A9F009A4C50 /* WRNotifyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A8148237B9A9F009A4C50 /* WRNotifyProtocol.swift */; };
 		BB7B83F223210093009EDCFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B83F123210093009EDCFB /* AppDelegate.swift */; };
 		BB7B83F423210093009EDCFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B83F323210093009EDCFB /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftUtilDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65280CE124DA0253182F1362 /* Pods-WRSwiftUtilDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.release.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BB14C17123C70D9F00D68D10 /* WRControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRControl.swift; sourceTree = "<group>"; };
 		BB7A8148237B9A9F009A4C50 /* WRNotifyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNotifyProtocol.swift; sourceTree = "<group>"; };
 		BB7B83EE23210093009EDCFB /* WRSwiftUtilDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WRSwiftUtilDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7B83F123210093009EDCFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC105BF23C1E54F005AE6AB /* WRView.swift */,
+				BB14C17123C70D9F00D68D10 /* WRControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			files = (
 				BBECE14C233C5A5D00198BF7 /* WRColor.swift in Sources */,
 				BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */,
+				BB14C17223C70D9F00D68D10 /* WRControl.swift in Sources */,
 				BB7A8149237B9A9F009A4C50 /* WRNotifyProtocol.swift in Sources */,
 				BBDCB1392338A30D0057BF2E /* WRNavigationBarProtocol.swift in Sources */,
 				BBC105C023C1E54F005AE6AB /* WRView.swift in Sources */,

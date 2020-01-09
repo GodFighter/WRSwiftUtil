@@ -19,9 +19,9 @@ import UIKit
 }
 
 @objc public class WRViewExtension : NSObject{
-    fileprivate let value: UIView
+    internal var value: UIView
 
-    fileprivate init(_ value: UIView){
+    internal init(_ value: UIView){
         self.value = value
     }
     
