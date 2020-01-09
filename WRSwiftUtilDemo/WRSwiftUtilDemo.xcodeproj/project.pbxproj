@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56F9513523C78B5F00BFB9BF /* UIControl+WRBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F9513423C78B5F00BFB9BF /* UIControl+WRBlock.m */; };
 		BB14C17223C70D9F00D68D10 /* WRControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB14C17123C70D9F00D68D10 /* WRControl.swift */; };
 		BB7A8149237B9A9F009A4C50 /* WRNotifyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A8148237B9A9F009A4C50 /* WRNotifyProtocol.swift */; };
 		BB7B83F223210093009EDCFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B83F123210093009EDCFB /* AppDelegate.swift */; };
@@ -31,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftUtilDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56F9512F23C78B1400BFB9BF /* WRSwiftUtilDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WRSwiftUtilDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		56F9513323C78B5F00BFB9BF /* UIControl+WRBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+WRBlock.h"; sourceTree = "<group>"; };
+		56F9513423C78B5F00BFB9BF /* UIControl+WRBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+WRBlock.m"; sourceTree = "<group>"; };
 		65280CE124DA0253182F1362 /* Pods-WRSwiftUtilDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.release.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BB14C17123C70D9F00D68D10 /* WRControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRControl.swift; sourceTree = "<group>"; };
 		BB7A8148237B9A9F009A4C50 /* WRNotifyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNotifyProtocol.swift; sourceTree = "<group>"; };
@@ -107,11 +111,14 @@
 			children = (
 				BB7B83F123210093009EDCFB /* AppDelegate.swift */,
 				BB7B83F323210093009EDCFB /* ViewController.swift */,
+				56F9513323C78B5F00BFB9BF /* UIControl+WRBlock.h */,
+				56F9513423C78B5F00BFB9BF /* UIControl+WRBlock.m */,
 				BB7B83F523210093009EDCFB /* Main.storyboard */,
 				BB7B83F823210094009EDCFB /* Assets.xcassets */,
 				BB7B83FA23210094009EDCFB /* LaunchScreen.storyboard */,
 				BB7B83FD23210094009EDCFB /* Info.plist */,
 				BB7B8403232100B0009EDCFB /* WRSwiftUtil */,
+				56F9512F23C78B1400BFB9BF /* WRSwiftUtilDemo-Bridging-Header.h */,
 			);
 			path = WRSwiftUtilDemo;
 			sourceTree = "<group>";
@@ -269,6 +276,7 @@
 				TargetAttributes = {
 					BB7B83ED23210093009EDCFB = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -357,6 +365,7 @@
 				BBDCB1392338A30D0057BF2E /* WRNavigationBarProtocol.swift in Sources */,
 				BBC105C023C1E54F005AE6AB /* WRView.swift in Sources */,
 				BBC105BB23C1E119005AE6AB /* WRFolder.swift in Sources */,
+				56F9513523C78B5F00BFB9BF /* UIControl+WRBlock.m in Sources */,
 				BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */,
 				BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */,
 				BBABFC88232F30F5000A1B3E /* WRPath.swift in Sources */,
@@ -512,6 +521,7 @@
 			baseConfigurationReference = E7936435BA1B164FF013B79F /* Pods-WRSwiftUtilDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D9M2CY5KM;
 				INFOPLIST_FILE = WRSwiftUtilDemo/Info.plist;
@@ -522,6 +532,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xianghui.WRSwiftUtilDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WRSwiftUtilDemo/WRSwiftUtilDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -532,6 +544,7 @@
 			baseConfigurationReference = 65280CE124DA0253182F1362 /* Pods-WRSwiftUtilDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D9M2CY5KM;
 				INFOPLIST_FILE = WRSwiftUtilDemo/Info.plist;
@@ -542,6 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xianghui.WRSwiftUtilDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WRSwiftUtilDemo/WRSwiftUtilDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

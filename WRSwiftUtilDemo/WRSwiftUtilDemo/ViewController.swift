@@ -22,10 +22,13 @@ class ViewController: WRBaseViewController {
         button.backgroundColor = .red
         button.frame = CGRect(x: 0, y: 100, width: 50, height: 100)
         
-        button.wr.add(.touchUpInside) { (sender) in
-            
+//        button.wr.touchUpInside { (sender) in
+//           print("touch up inside")
+//        }
+        button.wr.touchDown { (sender) in
+            print("touch down")
         }
-        
+
         
     }
     

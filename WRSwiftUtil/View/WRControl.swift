@@ -6,7 +6,9 @@
 //  Copyright © 2020 xianghui. All rights reserved.
 //
 
+import ObjectiveC
 import UIKit
+
 
 @objc extension UIControl : WRControlProtocol {
     public override var wr: WRControlExtension {
@@ -18,97 +20,196 @@ import UIKit
     var wr: WRControlExtension { get }
 }
 
-public typealias wr_control_action = (UIControl) -> ()
-
-public class WRControlWrapper : NSObject, NSCopying {
-    
-    deinit{
-        debugPrint("55555555")
-    }
-
-    var controlEvents : UIControl.Event
-    var handler : wr_control_action
-    
-    init(_ events : UIControl.Event, handler : @escaping wr_control_action) {
-        self.controlEvents = events
-        self.handler = handler
-    }
-    
-    public func copy(with zone: NSZone? = nil) -> Any {
-        return WRControlWrapper.init(self.controlEvents, handler: self.handler)
-    }
-    
-    @objc func invoke(_ sender : UIControl) {
-        self.handler(sender)
-    }
-
-}
-
-extension UIControl {
-    @objc public func wr_action(_ controlEvents: UIControl.Event, action:@escaping wr_control_action) -> UIControl?{
-        action(self)
-        return self
-    }
-}
-
+//MARK: -
 @objc public class WRControlExtension : WRViewExtension {
-
-    deinit{
-        debugPrint("2345544")
-    }
-
-    private struct wr_associatedKeys{
-       static var actionKey = "wr_associatedKey"
+    deinit {
+        print("deinit WRControlExtension")
     }
     
-//    private dynamic var actionInfos: Dictionary<UInt, Set<WRControlWrapper>>? {
-//        set{
-//            objc_setAssociatedObject(self,&wr_associatedKeys.actionKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY)
-//        }
-//        get{
-//            if let infos = objc_getAssociatedObject(self, &wr_associatedKeys.actionKey) as? Dictionary<UInt, Set<WRControlWrapper>> {
-//                return infos
-//            }
-//            return nil
-//        }
-//    }
-
-
     fileprivate init(_ value: UIControl){
         super.init(value)
         self.value = value
     }
     
-    @discardableResult
-    @objc public func add(_ controlEvents: UIControl.Event, action:@escaping wr_control_action) -> UIControl? {
-        
-//        var events = objc_getAssociatedObject(self.value, &wr_associatedKeys.actionKey) as? Dictionary<UInt, Set<WRControlWrapper>>
-//
-//        if events == nil {
-//            events = Dictionary<UInt, Set<WRControlWrapper>>()
-//            objc_setAssociatedObject(self.value, &wr_associatedKeys.actionKey, events, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
-//
-//        }
-//
-//        let key = controlEvents.rawValue
-//        var handlers = events?[key]
-//        if handlers == nil {
-//            handlers = Set<WRControlWrapper>()
-//            events![key] = handlers
-//        }
-
+    fileprivate func add(_ handler :@escaping UIControl.wr_control_handler, events: UIControl.Event) {
         if let control = self.value as? UIControl {
-            control.addTarget(control, action: #selector(control.wr_action(_:action:)), for: controlEvents)
-//            let target = WRControlWrapper.init(controlEvents, handler: action)
-//            handlers?.insert(target)
-//            control.addTarget(target, action: #selector(target.invoke(_:)), for: controlEvents)
+            
+            var handlers = control.handlers
+
+            if handlers == nil {
+                control.handlers = NSMutableDictionary.init(object: handler, forKey: NSNumber(integerLiteral: Int(events.rawValue)))
+            } else {
+                control.handlers!.setObject(handler, forKey: NSNumber(integerLiteral: Int(events.rawValue)))
+            }
         }
-        
-        return self.value as? UIControl
     }
     
-    @objc public func action_aaa(_ target : WRControlWrapper) {
-        print("1123")
+    @discardableResult
+    @objc public func touchDown(action: @escaping UIControl.wr_control_handler) -> UIControl {
+        if let control = self.value as? UIControl {
+            control.wr_addEventHandler(action as! (Any) -> Void, for: .touchDown)
+//            self.add(action, events: .touchDown)
+//            control.addTarget(control, action: #selector(control.wr_touchDown(_:)), for: .touchDown)
+        }
+        return self.value as! UIControl
     }
+/*
+    @discardableResult
+    @objc public func touchDragInside(action:@escaping UIControl.wr_control_handler) -> UIControl {
+        if let control = self.value as? UIControl {
+            self.add(action, events: .touchDragInside)
+            control.addTarget(control, action: #selector(control.wr_touchDragInside(_:)), for: .touchDragInside)
+        }
+        return self.value as! UIControl
+    }
+
+    @discardableResult
+    @objc public func touchDragOutside(action:@escaping UIControl.wr_control_handler) -> UIControl {
+        if let control = self.value as? UIControl {
+            self.add(action, events: .touchDragOutside)
+            control.addTarget(control, action: #selector(control.wr_touchDragOutside(_:)), for: .touchDragOutside)
+        }
+        return self.value as! UIControl
+    }
+
+    @discardableResult
+    @objc public func touchDragEnter(action:@escaping UIControl.wr_control_handler) -> UIControl {
+        if let control = self.value as? UIControl {
+            self.add(action, events: .touchDragEnter)
+            control.addTarget(control, action: #selector(control.wr_touchDragEnter(_:)), for: .touchDragEnter)
+        }
+        return self.value as! UIControl
+    }
+
+    @discardableResult
+    @objc public func touchDragExit(action:@escaping UIControl.wr_control_handler) -> UIControl {
+        if let control = self.value as? UIControl {
+            self.add(action, events: .touchDragExit)
+            control.addTarget(control, action: #selector(control.wr_touchDragExit(_:)), for: .touchDragExit)
+        }
+        return self.value as! UIControl
+    }
+
+    @discardableResult
+    @objc public func touchUpInside(action:@escaping UIControl.wr_control_handler) -> UIControl {
+        if let control = self.value as? UIControl {
+            self.add(action, events: .touchUpInside)
+            control.addTarget(control, action: #selector(control.wr_touchUpInside(_:)), for: .touchUpInside)
+        }
+        return self.value as! UIControl
+    }
+    
+    @discardableResult
+    @objc public func touchUpOutside(action:@escaping UIControl.wr_control_handler) -> UIControl {
+        if let control = self.value as? UIControl {
+            self.add(action, events: .touchUpOutside)
+            control.addTarget(control, action: #selector(control.wr_touchUpOutside(_:)), for: .touchUpOutside)
+        }
+        return self.value as! UIControl
+    }
+
+    @discardableResult
+    @objc public func touchCancel(action:@escaping UIControl.wr_control_handler) -> UIControl {
+        if let control = self.value as? UIControl {
+            self.add(action, events: .touchCancel)
+            control.addTarget(control, action: #selector(control.wr_touchCancel(_:)), for: .touchCancel)
+        }
+        return self.value as! UIControl
+    }
+
+    @discardableResult
+    @objc public func valueChanged(action:@escaping UIControl.wr_control_handler) -> UIControl {
+        if let control = self.value as? UIControl {
+            self.add(action, events: .valueChanged)
+            control.addTarget(control, action: #selector(control.wr_valueChanged(_:)), for: .valueChanged)
+        }
+        return self.value as! UIControl
+    }
+ */
 }
 
+//MARK: -
+fileprivate typealias UIControl_Handler = UIControl
+extension UIControl_Handler{
+    public typealias wr_control_handler = (Any) -> ()
+
+    private struct wr_associated{
+       static var handlerKey = "wr_h_associatedKey"
+
+        static var touchDownKey = "wr_h_associatedKey_touchdown"
+    }
+    
+    var handlers : NSMutableDictionary? {
+        set {
+            objc_setAssociatedObject(self, &wr_associated.handlerKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
+        }
+        get {
+            if let handlers = objc_getAssociatedObject(self, &wr_associated.handlerKey) as? NSDictionary {
+                return NSMutableDictionary.init(dictionary: handlers)
+            }
+            return nil
+        }
+    }
+        
+    
+    @objc public func wr_touchDown(_ controlAction:@escaping wr_control_handler) -> UIControl?{
+//        controlAction(self)
+//        print("begin")
+        if let handler = self.handlers?[NSNumber(integerLiteral: Int(UIControl.Event.touchDown.rawValue))] as? wr_control_handler {
+            handler(self)
+        }
+//        self.handlers?[NSNumber(integerLiteral: Int(UIControl.Event.touchDown.rawValue))]?(self)
+//        print("\(self.allControlEvents)")
+        return self
+    }
+    /*
+    @objc public func wr_touchDownRepeat(_ controlAction:@escaping wr_control_handler) -> UIControl?{
+//        self.touchDownBlock(self)
+//        self.handlers?[UIControl.Event.touchDownRepeat.rawValue]?(self)
+        return self
+    }
+
+    @objc public func wr_touchDragInside(_ controlAction:@escaping wr_control_handler) -> UIControl?{
+        self.handlers?[UIControl.Event.touchDragInside.rawValue]?(self)
+        return self
+    }
+
+    @objc public func wr_touchDragOutside(_ controlAction:@escaping wr_control_handler) -> UIControl?{
+        self.handlers?[UIControl.Event.touchDragOutside.rawValue]?(self)
+        return self
+    }
+
+    @objc public func wr_touchDragEnter(_ controlAction:@escaping wr_control_handler) -> UIControl?{
+        self.handlers?[UIControl.Event.touchDragEnter.rawValue]?(self)
+        return self
+    }
+
+    @objc public func wr_touchDragExit(_ controlAction:@escaping wr_control_handler) -> UIControl?{
+        self.handlers?[UIControl.Event.touchDragExit.rawValue]?(self)
+        return self
+    }
+
+    @objc public func wr_touchUpInside(_ controlAction:@escaping wr_control_handler) -> UIControl?{
+        DispatchQueue.main.async {
+            self.handlers?[UIControl.Event.touchUpInside.rawValue]?(self)
+            print("\(self.allControlEvents)")
+        }
+        return self
+    }
+
+    @objc public func wr_touchUpOutside(_ controlAction:@escaping wr_control_handler) -> UIControl?{
+        self.handlers?[UIControl.Event.touchUpOutside.rawValue]?(self)
+        return self
+    }
+
+    @objc public func wr_touchCancel(_ controlAction:@escaping wr_control_handler) -> UIControl?{
+        self.handlers?[UIControl.Event.touchCancel.rawValue]?(self)
+        return self
+    }
+
+    @objc public func wr_valueChanged(_ controlAction:@escaping wr_control_handler) -> UIControl?{
+        self.handlers?[UIControl.Event.valueChanged.rawValue]?(self)
+        return self
+    }
+*/
+}
