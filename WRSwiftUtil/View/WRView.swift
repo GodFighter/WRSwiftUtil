@@ -9,7 +9,7 @@
 import UIKit
 
 @objc extension UIView : WRViewProtocol {
-    public var wr: WRViewExtension {
+    public override var wr: WRViewExtension {
         return WRViewExtension(self)
     }
 }
@@ -18,19 +18,20 @@ import UIKit
     var wr: WRViewExtension { get }
 }
 
-@objc public class WRViewExtension : NSObject{
-    internal var value: UIView
-
+@objc public class WRViewExtension: WRObjectExtension{
     internal init(_ value: UIView){
+        super.init(value)
         self.value = value
     }
     
     @objc public func clipCorner(_ corners: UIRectCorner, cornerRadius: CGSize) {
-        let maskBezier = UIBezierPath.init(roundedRect: CGRect.init(x: 0, y: 0, width: self.value.bounds.width, height: self.value.bounds.height), byRoundingCorners: corners, cornerRadii: cornerRadius)
-        let maskLayer = CAShapeLayer.init()
-        maskLayer.frame = CGRect.init(x: 0, y: 0, width: self.value.bounds.width, height: self.value.bounds.height)
-        maskLayer.path = maskBezier.cgPath
-        self.value.layer.mask = maskLayer
+        if let view = self.value as? UIView {
+            let maskBezier = UIBezierPath.init(roundedRect: CGRect.init(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height), byRoundingCorners: corners, cornerRadii: cornerRadius)
+            let maskLayer = CAShapeLayer.init()
+            maskLayer.frame = CGRect.init(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+            maskLayer.path = maskBezier.cgPath
+            view.layer.mask = maskLayer
+        }
     }
 
 }

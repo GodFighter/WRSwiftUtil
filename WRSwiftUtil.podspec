@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'WRSwiftUtil'
-    s.version      = "1.1.6"
+    s.version      = "1.2.0"
     s.summary      = '常用 Swift 工具类定义'
     s.description  = '常用 Swift 工具类定义,便于初始化项目'
     s.homepage     = 'https://github.com/GodFighter/WRSwiftUtil'
@@ -24,11 +24,6 @@ Pod::Spec.new do |s|
 
     s.subspec 'Image' do |ss|
         ss.source_files = 'WRSwiftUtil/Image/*.swift'
-    end
-
-    s.subspec 'Indicator' do |ss|
-        ss.source_files = 'WRSwiftUtil/Indicator/*.swift'
-        ss.dependency 'MBProgressHUD', '~> 1.1.0'
     end
 
     s.subspec 'Controller' do |ss|
@@ -61,6 +56,5 @@ Pod::Spec.new do |s|
     end
 
     s.dependency 'Colours', '~> 5.13.0'
-    s.dependency 'MBProgressHUD', '~> 1.1.0'
 
 end

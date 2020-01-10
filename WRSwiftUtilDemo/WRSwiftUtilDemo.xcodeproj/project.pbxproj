@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		56F9513523C78B5F00BFB9BF /* UIControl+WRBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F9513423C78B5F00BFB9BF /* UIControl+WRBlock.m */; };
 		BB14C17223C70D9F00D68D10 /* WRControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB14C17123C70D9F00D68D10 /* WRControl.swift */; };
 		BB7A8149237B9A9F009A4C50 /* WRNotifyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7A8148237B9A9F009A4C50 /* WRNotifyProtocol.swift */; };
 		BB7B83F223210093009EDCFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B83F123210093009EDCFB /* AppDelegate.swift */; };
@@ -17,7 +16,6 @@
 		BB7B83FC23210094009EDCFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7B83FA23210094009EDCFB /* LaunchScreen.storyboard */; };
 		BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B8405232100F5009EDCFB /* WRDevice.swift */; };
 		BBABFC88232F30F5000A1B3E /* WRPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBABFC87232F30F5000A1B3E /* WRPath.swift */; };
-		BBBD1F192334B0B000A2B415 /* WRProgressHUDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */; };
 		BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31923220509004BCB92 /* WRImage.swift */; };
 		BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */; };
 		BBC105B323C1794D005AE6AB /* WRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC105B223C1794D005AE6AB /* WRString.swift */; };
@@ -27,14 +25,13 @@
 		BBDCB137233873E60057BF2E /* WRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCB136233873E60057BF2E /* WRBaseViewController.swift */; };
 		BBDCB1392338A30D0057BF2E /* WRNavigationBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCB1382338A30D0057BF2E /* WRNavigationBarProtocol.swift */; };
 		BBECE14C233C5A5D00198BF7 /* WRColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBECE14B233C5A5D00198BF7 /* WRColor.swift */; };
+		BBF5883523C8121D008113D2 /* WRObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF5883423C8121D008113D2 /* WRObjectProtocol.swift */; };
 		DEE1C45F1AC6EFC71804333D /* Pods_WRSwiftUtilDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1CB887B8A709F1C1C1076313 /* Pods_WRSwiftUtilDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftUtilDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F9512F23C78B1400BFB9BF /* WRSwiftUtilDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WRSwiftUtilDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		56F9513323C78B5F00BFB9BF /* UIControl+WRBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+WRBlock.h"; sourceTree = "<group>"; };
-		56F9513423C78B5F00BFB9BF /* UIControl+WRBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+WRBlock.m"; sourceTree = "<group>"; };
 		65280CE124DA0253182F1362 /* Pods-WRSwiftUtilDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.release.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BB14C17123C70D9F00D68D10 /* WRControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRControl.swift; sourceTree = "<group>"; };
 		BB7A8148237B9A9F009A4C50 /* WRNotifyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNotifyProtocol.swift; sourceTree = "<group>"; };
@@ -47,7 +44,6 @@
 		BB7B83FD23210094009EDCFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7B8405232100F5009EDCFB /* WRDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDevice.swift; sourceTree = "<group>"; };
 		BBABFC87232F30F5000A1B3E /* WRPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPath.swift; sourceTree = "<group>"; };
-		BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRProgressHUDProtocol.swift; sourceTree = "<group>"; };
 		BBC0A31923220509004BCB92 /* WRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
 		BBC0A31D232205C7004BCB92 /* WRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationController.swift; sourceTree = "<group>"; };
 		BBC105B223C1794D005AE6AB /* WRString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRString.swift; sourceTree = "<group>"; };
@@ -57,6 +53,7 @@
 		BBDCB136233873E60057BF2E /* WRBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRBaseViewController.swift; sourceTree = "<group>"; };
 		BBDCB1382338A30D0057BF2E /* WRNavigationBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationBarProtocol.swift; sourceTree = "<group>"; };
 		BBECE14B233C5A5D00198BF7 /* WRColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRColor.swift; sourceTree = "<group>"; };
+		BBF5883423C8121D008113D2 /* WRObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRObjectProtocol.swift; sourceTree = "<group>"; };
 		E7936435BA1B164FF013B79F /* Pods-WRSwiftUtilDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftUtilDemo.debug.xcconfig"; path = "Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,8 +108,6 @@
 			children = (
 				BB7B83F123210093009EDCFB /* AppDelegate.swift */,
 				BB7B83F323210093009EDCFB /* ViewController.swift */,
-				56F9513323C78B5F00BFB9BF /* UIControl+WRBlock.h */,
-				56F9513423C78B5F00BFB9BF /* UIControl+WRBlock.m */,
 				BB7B83F523210093009EDCFB /* Main.storyboard */,
 				BB7B83F823210094009EDCFB /* Assets.xcassets */,
 				BB7B83FA23210094009EDCFB /* LaunchScreen.storyboard */,
@@ -130,7 +125,6 @@
 				BB7A8147237B9A68009A4C50 /* Notification */,
 				BBB34158234EE2B9005BF8B1 /* Common */,
 				BBECE14A233C5A4500198BF7 /* Color */,
-				BBBD1F14233488AC00A2B415 /* Indicator */,
 				BBBD1F11233488AC00A2B415 /* Lib */,
 				BBC0A31B23220576004BCB92 /* Controller */,
 				BBC0A318232204D8004BCB92 /* Image */,
@@ -153,6 +147,7 @@
 		BBB34158234EE2B9005BF8B1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BBF5883423C8121D008113D2 /* WRObjectProtocol.swift */,
 				BBC105B223C1794D005AE6AB /* WRString.swift */,
 				BBC105B523C180BD005AE6AB /* WRTimeInterval.swift */,
 			);
@@ -172,14 +167,6 @@
 			children = (
 			);
 			path = Lib;
-			sourceTree = "<group>";
-		};
-		BBBD1F14233488AC00A2B415 /* Indicator */ = {
-			isa = PBXGroup;
-			children = (
-				BBBD1F182334B0B000A2B415 /* WRProgressHUDProtocol.swift */,
-			);
-			path = Indicator;
 			sourceTree = "<group>";
 		};
 		BBC0A318232204D8004BCB92 /* Image */ = {
@@ -359,18 +346,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBECE14C233C5A5D00198BF7 /* WRColor.swift in Sources */,
+				BBF5883523C8121D008113D2 /* WRObjectProtocol.swift in Sources */,
 				BBC0A31A23220509004BCB92 /* WRImage.swift in Sources */,
 				BB14C17223C70D9F00D68D10 /* WRControl.swift in Sources */,
 				BB7A8149237B9A9F009A4C50 /* WRNotifyProtocol.swift in Sources */,
 				BBDCB1392338A30D0057BF2E /* WRNavigationBarProtocol.swift in Sources */,
 				BBC105C023C1E54F005AE6AB /* WRView.swift in Sources */,
 				BBC105BB23C1E119005AE6AB /* WRFolder.swift in Sources */,
-				56F9513523C78B5F00BFB9BF /* UIControl+WRBlock.m in Sources */,
 				BB7B8406232100F5009EDCFB /* WRDevice.swift in Sources */,
 				BBC0A31E232205C7004BCB92 /* WRNavigationController.swift in Sources */,
 				BBABFC88232F30F5000A1B3E /* WRPath.swift in Sources */,
 				BBC105B323C1794D005AE6AB /* WRString.swift in Sources */,
-				BBBD1F192334B0B000A2B415 /* WRProgressHUDProtocol.swift in Sources */,
 				BBC105B623C180BD005AE6AB /* WRTimeInterval.swift in Sources */,
 				BB7B83F423210093009EDCFB /* ViewController.swift in Sources */,
 				BBDCB137233873E60057BF2E /* WRBaseViewController.swift in Sources */,

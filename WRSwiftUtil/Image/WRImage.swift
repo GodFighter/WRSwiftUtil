@@ -337,33 +337,36 @@ fileprivate struct WRContext{
 }
 
 //MARK:-
-extension UIImage: WRImageProtocol{
-    public var wr: WRImageExtension {
+@objc extension UIImage: WRImageProtocol{
+    public override var wr: WRImageExtension {
         return WRImageExtension(self)
     }
 }
 
-public protocol WRImageProtocol{
+@objc public protocol WRImageProtocol{
     var wr: WRImageExtension { get }
 }
 
-public struct WRImageExtension{
-    fileprivate let value: UIImage
-    
-    fileprivate init(_ value: UIImage){
+//MARK:-
+@objc public class WRImageExtension: WRObjectExtension{
+    init(_ value: UIImage){
+        super.init(value)
         self.value = value
     }
     
-    public func imageTintColor(_ tintColor: UIColor) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(self.value.size, false, self.value.scale)
+    @objc public func imageTintColor(_ tintColor: UIColor) -> UIImage? {
+        guard let image = self.value as? UIImage else {
+            return nil
+        }
+        UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
         
         let context = UIGraphicsGetCurrentContext()
-        context?.translateBy(x: 0, y: self.value.size.height)
+        context?.translateBy(x: 0, y: image.size.height)
         context?.scaleBy(x: 1.0, y: -1.0)
         context?.setBlendMode(CGBlendMode.normal)
         
-        let rect = CGRect(x: 0, y: 0, width: self.value.size.width, height: self.value.size.height) as CGRect
-        if let cgImage = self.value.cgImage {
+        let rect = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height) as CGRect
+        if let cgImage = image.cgImage {
             context?.clip(to: rect, mask:  cgImage)
         }
         
