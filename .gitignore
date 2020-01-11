@@ -66,3 +66,29 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+WRSwiftUtilDemo/Podfile.lock
+WRSwiftUtilDemo/Pods/Colours/Colours.h
+WRSwiftUtilDemo/Pods/Colours/Colours.m
+WRSwiftUtilDemo/Pods/Colours/LICENSE
+WRSwiftUtilDemo/Pods/Colours/README.md
+WRSwiftUtilDemo/Pods/Manifest.lock
+WRSwiftUtilDemo/Pods/Pods.xcodeproj/project.pbxproj
+WRSwiftUtilDemo/Pods/Target Support Files/Colours/Colours-dummy.m
+WRSwiftUtilDemo/Pods/Target Support Files/Colours/Colours-Info.plist
+WRSwiftUtilDemo/Pods/Target Support Files/Colours/Colours-prefix.pch
+WRSwiftUtilDemo/Pods/Target Support Files/Colours/Colours-umbrella.h
+WRSwiftUtilDemo/Pods/Target Support Files/Colours/Colours.modulemap
+WRSwiftUtilDemo/Pods/Target Support Files/Colours/Colours.xcconfig
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-acknowledgements.markdown
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-acknowledgements.plist
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-dummy.m
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-frameworks-Debug-input-files.xcfilelist
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-frameworks-Debug-output-files.xcfilelist
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-frameworks-Release-input-files.xcfilelist
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-frameworks-Release-output-files.xcfilelist
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-frameworks.sh
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-Info.plist
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo-umbrella.h
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.debug.xcconfig
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.modulemap
+WRSwiftUtilDemo/Pods/Target Support Files/Pods-WRSwiftUtilDemo/Pods-WRSwiftUtilDemo.release.xcconfig
