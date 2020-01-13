@@ -99,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				BB2BFBDB23CA332200FFC1A3 /* WRActivityIndicator.swift */,
-				BBC34FCD23CB4CCD00508CFA /* WRActivityIndicatorShape.swift */,
 				BB2BFBDD23CA42EA00FFC1A3 /* WRActivityIndicatorView.swift */,
 				BB2CF72F23CA4BB300A37103 /* Animations */,
 			);
@@ -109,6 +108,7 @@
 		BB2CF72F23CA4BB300A37103 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				BBC34FCD23CB4CCD00508CFA /* WRActivityIndicatorShape.swift */,
 				BB2CF73023CA4BEF00A37103 /* WRActivityIndicatorAnimationSystem.swift */,
 				BB2CF73223CA4C4200A37103 /* WRActivityIndicatorAnimationRing.swift */,
 				BBC34FCF23CB54FE00508CFA /* WRActivityIndicatorAnimationRingSpring.swift */,
