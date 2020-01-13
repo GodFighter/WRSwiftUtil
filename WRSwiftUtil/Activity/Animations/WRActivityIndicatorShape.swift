@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol WRActivityIndicatorAnimationDelegate {
+internal protocol WRActivityIndicatorAnimationDelegate {
     func setupAnimation(in layer: CALayer, size: CGSize, color: UIColor)
 }
 
-enum WRActivityIndicatorShape {
+internal enum WRActivityIndicatorShape {
     case circle
     case circleSemi
     case ring
