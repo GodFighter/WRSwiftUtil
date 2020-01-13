@@ -24,7 +24,7 @@ public extension WRActivityIndicatorProtocol {
         let object = objc_getAssociatedObject(self, &wr_activityIndicator_associated.key) as? NSObject
         guard let activityIndicator = object as? WRActivityIndicatorExtension else {
             let activityIndicator = WRActivityIndicatorExtension(self as? NSObject ?? NSObject())
-            objc_setAssociatedObject(activityIndicator, &wr_activityIndicator_associated.key, activityIndicator, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &wr_activityIndicator_associated.key, activityIndicator, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             return activityIndicator
             
         }
@@ -37,7 +37,13 @@ public extension WRActivityIndicatorProtocol {
 @objc public class WRActivityIndicatorExtension: WRObjectExtension{
     
     public var indicator : WRActivityIndicatorManager {
-        return WRActivityIndicatorManager.init(self.value)
+        let object = objc_getAssociatedObject(self, &wr_activityIndicator_associated.key) as? NSObject
+        guard let activityIndicator = object as? WRActivityIndicatorManager else {
+            let activityIndicator = WRActivityIndicatorManager.init(self.value)
+            objc_setAssociatedObject(self, &wr_activityIndicator_associated.key, activityIndicator, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            return activityIndicator
+        }
+        return activityIndicator
     }
 }
 
@@ -199,19 +205,44 @@ public extension WRActivityIndicatorProtocol {
 
 
    fileprivate func hide(_ fadeOutAnimation: WRFadeOutAnimation?) {
-       for window in UIApplication.shared.windows {
-           for item in window.subviews
-               where item.restorationIdentifier == restorationIdentifier {
-                   if let fadeOutAnimation = fadeOutAnimation {
-                       fadeOutAnimation(item) {
-                           item.removeFromSuperview()
-                       }
-                   } else {
-                       item.removeFromSuperview()
-                   }
-           }
-       }
-   }
+        
+    if let controller = self.value as? UIViewController {
+        for item in controller.view.subviews
+            where item.restorationIdentifier == restorationIdentifier {
+                if let fadeOutAnimation = fadeOutAnimation {
+                    fadeOutAnimation(item) {
+                        item.removeFromSuperview()
+                    }
+                } else {
+                    item.removeFromSuperview()
+                }
+        }
+    } else if let view = self.value as? UIView {
+        for item in view.subviews
+            where item.restorationIdentifier == restorationIdentifier {
+                if let fadeOutAnimation = fadeOutAnimation {
+                    fadeOutAnimation(item) {
+                        item.removeFromSuperview()
+                    }
+                } else {
+                    item.removeFromSuperview()
+                }
+        }
+    } else {
+        for window in UIApplication.shared.windows {
+            for item in window.subviews
+                where item.restorationIdentifier == restorationIdentifier {
+                    if let fadeOutAnimation = fadeOutAnimation {
+                        fadeOutAnimation(item) {
+                            item.removeFromSuperview()
+                        }
+                    } else {
+                        item.removeFromSuperview()
+                    }
+            }
+        }
+    }
+    }
 }
 
 //MARK:-
