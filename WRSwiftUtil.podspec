@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'WRSwiftUtil'
-    s.version      = "1.3.4"
+    s.version      = "1.3.5"
     s.summary      = '常用 Swift 工具类定义'
     s.description  = '常用 Swift 工具类定义,便于初始化项目'
     s.homepage     = 'https://github.com/GodFighter/WRSwiftUtil'
@@ -62,8 +62,7 @@ Pod::Spec.new do |s|
         ss.dependency 'WRSwiftUtil/Common'
         ss.subspec 'Animations' do |sss|
             sss.source_files = 'WRSwiftUtil/Activity/Animations/*.swift'
-            sss.dependency 'WRSwiftUtil/Activity/Animations/WRActivityIndicatorShape.swift'
-    end
+        end
     end
 
     s.dependency 'Colours', '~> 5.13.0'
