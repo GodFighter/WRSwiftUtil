@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol WRActivityIndicatorAnimationDelegate {
+    func setupAnimation(in layer: CALayer, size: CGSize, color: UIColor)
+}
+
 enum WRActivityIndicatorShape {
     case circle
     case circleSemi

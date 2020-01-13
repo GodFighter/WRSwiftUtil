@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol WRActivityIndicatorAnimationDelegate {
-    func setupAnimation(in layer: CALayer, size: CGSize, color: UIColor)
-}
-
 @objc public enum WRActivityIndicatorType: Int, CaseIterable {
     case system
     case ring
