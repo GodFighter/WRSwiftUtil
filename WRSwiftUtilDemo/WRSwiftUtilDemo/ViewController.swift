@@ -22,7 +22,7 @@ class ViewController: WRBaseViewController, WRActivityIndicatorProtocol {
 
 
 //        self.wr.startAnimating(size, message: "Loading...", type: .springCircle, backgroundColor: .red, fadeInAnimation: nil)
-        
+                
         var size = CGSize(width: 40, height: 40)
         
         self.wr.indicator.startAnimating(size, message: "Loading...", type: .ballRotateChase)
@@ -31,17 +31,19 @@ class ViewController: WRBaseViewController, WRActivityIndicatorProtocol {
         
         
         size = CGSize(width: 20, height: 20)
-        self.button.setTitle("12345", for: .normal)
-        self.button.setTitleColor(.black, for: .highlighted)
-        self.view.addSubview(self.button)
-        self.button.backgroundColor = .green
-        self.button.frame = CGRect(x: 0, y: 100, width: 50, height: 100)
-        self.button.wr.indicator.startAnimating(size, type: .ballSpinFadeLoader, backgroundColor: .blue)
 
 
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
-//            self.wr.indicator.stopAnimating()
-//        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            self.button.setTitle("12345", for: .normal)
+            self.button.setTitleColor(.black, for: .highlighted)
+            self.view.addSubview(self.button)
+            self.button.backgroundColor = .green
+            self.button.frame = CGRect(x: 0, y: 100, width: 50, height: 100)
+            
+            self.button.wr.event(.touchDown) { (button, event) in
+                self.wr.indicator.stopAnimating()
+            }
+        }
 
         button.wr.event(.touchDown) { (sender, event)  in
             

@@ -14,17 +14,29 @@ import UIKit
 @objc public protocol WRActivityIndicatorProtocol {
 }
 
+private struct wr_activityIndicator_associated{
+   static var key = "wr_activityIndicator_associated_key"
+}
+
 public extension WRActivityIndicatorProtocol {
         
     var wr: WRActivityIndicatorExtension {
-        return WRActivityIndicatorExtension(self as? NSObject ?? NSObject())
+        let object = objc_getAssociatedObject(self, &wr_activityIndicator_associated.key) as? NSObject
+        guard let activityIndicator = object as? WRActivityIndicatorExtension else {
+            let activityIndicator = WRActivityIndicatorExtension(self as? NSObject ?? NSObject())
+            objc_setAssociatedObject(activityIndicator, &wr_activityIndicator_associated.key, activityIndicator, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            return activityIndicator
+            
+        }
+        
+        return activityIndicator
     }
 }
 
 //MARK:-
 @objc public class WRActivityIndicatorExtension: WRObjectExtension{
     
-    var indicator : WRActivityIndicatorManager {
+    public var indicator : WRActivityIndicatorManager {
         return WRActivityIndicatorManager.init(self.value)
     }
 }
@@ -66,9 +78,9 @@ public extension WRActivityIndicatorProtocol {
         return label
     }()
 
-    public var value : Any
+    fileprivate var value : Any
         
-    private let restorationIdentifier = "WRActivityIndicatorViewContainer"
+    fileprivate let restorationIdentifier = "WRActivityIndicatorViewContainer"
 
     fileprivate var state: State = .stopped
     fileprivate var data: WRActivityData? // Shared activity data across states
@@ -80,10 +92,6 @@ public extension WRActivityIndicatorProtocol {
         self.value = value
     }
     
-    public func indicator(_ value : Any) -> WRActivityIndicatorManager {
-        return WRActivityIndicatorManager.init(value)
-    }
-
     public final func startAnimating(
         _ size: CGSize? = nil,
         message: String? = nil,
