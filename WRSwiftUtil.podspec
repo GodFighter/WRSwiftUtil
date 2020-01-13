@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'WRSwiftUtil'
-    s.version      = "1.2.1"
+    s.version      = "1.3.0"
     s.summary      = '常用 Swift 工具类定义'
     s.description  = '常用 Swift 工具类定义,便于初始化项目'
     s.homepage     = 'https://github.com/GodFighter/WRSwiftUtil'

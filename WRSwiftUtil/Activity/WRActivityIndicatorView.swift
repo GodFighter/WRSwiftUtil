@@ -14,12 +14,20 @@ protocol WRActivityIndicatorAnimationDelegate {
 
 @objc public enum WRActivityIndicatorType: Int, CaseIterable {
     case system
-    case circle
-    
+    case ring
+    case ringSpring
+    case ballRotateChase
+    case ballSpinFadeLoader
+    case audioEqualizer
+
     func animation() -> WRActivityIndicatorAnimationDelegate {
         switch self {
-        case .system:return WRActivityIndicatorAnimationSystem()
-        case .circle:return WRActivityIndicatorAnimationCircle()
+            case .system:               return WRActivityIndicatorAnimationSystem()
+            case .ring:                 return WRActivityIndicatorAnimationRing()
+            case .ringSpring:           return WRActivityIndicatorAnimationRingSpring()
+            case .ballRotateChase:      return WRActivityIndicatorAnimationBallRotateChase()
+            case .ballSpinFadeLoader:   return WRActivityIndicatorAnimationBallSpinFadeLoader()
+            case .audioEqualizer:       return WRActivityIndicatorAnimationAudioEqualizer()
         }
     }
 }

@@ -8,6 +8,10 @@
 
 import UIKit
 
+extension UIButton : WRActivityIndicatorProtocol {
+    
+}
+
 class ViewController: WRBaseViewController, WRActivityIndicatorProtocol {
     
     var button = UIButton.init(type: .custom)
@@ -16,18 +20,31 @@ class ViewController: WRBaseViewController, WRActivityIndicatorProtocol {
         super.viewDidLoad()
         self.view.backgroundColor = .white
 
-        button.setTitle("12345", for: .normal)
-        button.setTitleColor(.black, for: .highlighted)
-        self.view.addSubview(button)
-        button.backgroundColor = .red
-        button.frame = CGRect(x: 0, y: 100, width: 50, height: 100)
-        
-        let size = CGSize(width: 80, height: 80)
 
-        self.wr.startAnimating(size, message: "Loading...", type: .system, fadeInAnimation: nil)
+//        self.wr.startAnimating(size, message: "Loading...", type: .springCircle, backgroundColor: .red, fadeInAnimation: nil)
         
+        var size = CGSize(width: 40, height: 40)
+        
+        self.wr.indicator.startAnimating(size, message: "Loading...", type: .ballRotateChase)
+//        self.WR.indicator(self).startAnimating(size, message: "Loading...", type: .springCircle, backgroundColor: .red, fadeInAnimation: nil)
+//        self.WR.indicator(self).sta
+        
+        
+        size = CGSize(width: 20, height: 20)
+        self.button.setTitle("12345", for: .normal)
+        self.button.setTitleColor(.black, for: .highlighted)
+        self.view.addSubview(self.button)
+        self.button.backgroundColor = .green
+        self.button.frame = CGRect(x: 0, y: 100, width: 50, height: 100)
+        self.button.wr.indicator.startAnimating(size, type: .ballSpinFadeLoader, backgroundColor: .blue)
+
+
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
+//            self.wr.indicator.stopAnimating()
+//        }
+
         button.wr.event(.touchDown) { (sender, event)  in
-            print("\(event)")
+            
             }?.wr.event(.touchUpInside) { (sender, event)  in
                 print("\(event)")
             }?.wr.event(.valueChanged, handler: { (sender, event) in
